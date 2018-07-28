@@ -11,12 +11,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link href="css/main.css" rel="stylesheet">
+
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>-->
 </head>
 <body id="page-top">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-		<a class="navbar-brand js-scroll-trigger" href="#page-top">
+		<a class="navbar-brand trigger-scroll" href="#page-top">
       <span class="d-none d-lg-block">
-        <img alt="" class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profilepicture.jpg" style="border: 0.5rem solid rgba(255, 255, 255, 1)">
+        <img alt="profile picture of myself!" class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profilepicture.jpg" style="border: 0.5rem solid rgba(255, 255, 255, 1)">
       </span>
     </a> 
     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
@@ -25,22 +27,22 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#about">About</a>
+					<a class="nav-link trigger-scroll" href="#about">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#experience">Work Life</a>
+					<a class="nav-link trigger-scroll" href="#worklife">Work Life</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#education">Education</a>
+					<a class="nav-link trigger-scroll" href="#education">Education</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#skills">Skill Set</a>
+					<a class="nav-link trigger-scroll" href="#skillset">Skill Set</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+					<a class="nav-link trigger-scroll" href="#interests">Interests</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#awards">Certifications and Awards</a>
+					<a class="nav-link trigger-scroll" href="#awards">Certifications and Awards</a>
 				</li>
 			</ul>
 		</div>
@@ -69,7 +71,7 @@
 				</ul>
 			</div>
 		</section>
-		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="worklife">
 			<div class="my-auto">
 				<h2 class="mb-5">Work Life</h2>
 				<div class="resume-item d-flex flex-column flex-md-row mb-5">
@@ -130,7 +132,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skillset">
 			<div class="my-auto">
 				<h2 class="mb-5">Skill Set</h2>
 				<div class="subheading mb-3">
@@ -175,6 +177,14 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
 	</script> 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
-	</script> 
+  </script> 
+  <script>
+      $(".trigger-scroll").click(function() {
+          var href = $(this).attr('href');
+          $('html,body').animate({
+              scrollTop: $(href).offset().top},
+              'slow');
+      });
+    </script>
 </body>
 </html>
